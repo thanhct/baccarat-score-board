@@ -77,7 +77,7 @@ export class ScoreBoard {
 
   public static fromRawData(results: ReadonlyArray<string>): ScoreBoard {
     const res = results.slice(); // 浅拷贝一份数组 用于 reverse()
-    res.reverse(); // 已知 WebSocket 传回的 string[] 中 最新的数据在最前面
+    // res.reverse(); // 已知 WebSocket 传回的 string[] 中 最新的数据在最前面
     return new ScoreBoard(fromRawData(res));
   }
 

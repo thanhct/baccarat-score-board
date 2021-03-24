@@ -11,12 +11,19 @@ export enum PairResult {
   AllPair,
 }
 
+export enum StrResult {
+  G,
+  R,
+  B,
+}
+
 export class RoundResult {
   public constructor(
     public readonly order: number, // 用于折行后确认先后关系
     public readonly result: number,
     public readonly gameResult: GameResult,
     public readonly pairResult: PairResult,
+    public readonly stringResult: string,
   ) {}
 
   /**
@@ -28,6 +35,7 @@ export class RoundResult {
       source.result,
       source.gameResult,
       source.pairResult,
+      source.stringResult,
     );
   }
 }

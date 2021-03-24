@@ -1,4 +1,4 @@
-import { GameResult, PairResult, RoundResult } from './round-result';
+import {GameResult, PairResult, RoundResult, StrResult} from './round-result';
 
 function GameResultParser(
   this: void,
@@ -34,6 +34,22 @@ function PairResultParser(
   }
 }
 
+function GameResultToStr(
+  this: void,
+  result: 0 | 1 | 2 | number
+): StrResult | undefined {
+  switch (result) {
+    case 0:
+      return StrResult.G;
+    case 1:
+      return StrResult.R;
+    case 2:
+      return StrResult.B;
+    default:
+      return undefined;
+  }
+}
+
 function strToRoundResult(this: void, str: string, order: number): RoundResult {
   const result = Number(str[1]);
   const winner = GameResultParser(str[0]);
@@ -47,7 +63,7 @@ function strToRoundResult(this: void, str: string, order: number): RoundResult {
   if (typeof pair === 'undefined') {
     throw new Error(`[Invalid] Pair not in range: ${str}`);
   }
-  return new RoundResult(order, result, winner, pair);
+  return new RoundResult(order, result, winner, pair, str[0]);
 }
 
 export function fromRawData(

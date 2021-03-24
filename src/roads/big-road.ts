@@ -5,8 +5,9 @@ import { wrapColumn, wrapRow } from './shared';
 export type BigRoadItem = Readonly<{
   order: number; // 用于折行后确认先后关系
   result: number;
-  gameResult: GameResult.BankerWin | GameResult.PlayerWin;
+  gameResult: GameResult.BankerWin | GameResult.PlayerWin | GameResult.Tie;
   pairResult: PairResult;
+  strResult: string;
 }>;
 
 /**
@@ -18,14 +19,13 @@ function generateBigRoadItemList(
 ): ReadonlyArray<BigRoadItem> {
   return roundResults
     .map(res => {
-      return res.gameResult !== GameResult.Tie
-        ? {
+       return {
             order: res.order,
             result: res.result,
             gameResult: res.gameResult,
             pairResult: res.pairResult,
+            strResult: res.stringResult,
           }
-        : undefined;
     })
     .filter((result): result is BigRoadItem => typeof result !== 'undefined');
 }
