@@ -23,9 +23,9 @@ function printRoad<T extends object>(
 // Data input;
 const input: ReadonlyArray<string> = [
   'R6n','B7n','B3n','B3n','R8n','R8r','B7r','G8n',
-  // 'B7n','R4n','B6n','R9n','B9n','R4n','R5n','R9n',
-  // 'R7n','B8n','R7n','B7n','R8n','R5n','B8r','B8n','B8n','B8n','B9n','R4n','R4n','B7r','B4n','B8b',
-  // 'R5n','R6n','R7n','B8n','B8n','B8n','R6n','R5n','R8n','R8b','R8n','R9n','B9n','B8n','R5n','R7n',
+  'B7n','R4n','B6n','R9n','B9n','R4n','R5n','R9n',
+  'R7n','B8n','R7n','B7n','R8n','R5n','B8r','B8n','B8n','B8n','B9n','R4n','R4n','B7r','B4n','B8b',
+  'R5n','R6n','R7n','B8n','B8n','B8n','R6n','R5n','R8n','R8b','R8n','R9n','B9n','B8n','R5n','R7n',
   // 'G3n','R5n','R9n','B5n','B3n','R4n','B8n','B9n','B6b','R7n','R8n','R7n','B9n','R8n','R8r','R6n',
   // 'G9n','R2b','R8n','B9n','R8n','B7n','R2r','R9n','G0b','R4n','R4n','B9n','B6n','B3n','R4n','B7n',
   // 'R8n','R4r','R9n','B9n','R8n','R5n','R8n','R8n','B3n','B9n','G9n','R9n','B7r','B6n','B7r','R6n',

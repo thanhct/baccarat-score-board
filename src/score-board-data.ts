@@ -34,22 +34,6 @@ function PairResultParser(
   }
 }
 
-function GameResultToStr(
-  this: void,
-  result: 0 | 1 | 2 | number
-): StrResult | undefined {
-  switch (result) {
-    case 0:
-      return StrResult.G;
-    case 1:
-      return StrResult.R;
-    case 2:
-      return StrResult.B;
-    default:
-      return undefined;
-  }
-}
-
 function strToRoundResult(this: void, str: string, order: number): RoundResult {
   const result = Number(str[1]);
   const winner = GameResultParser(str[0]);
