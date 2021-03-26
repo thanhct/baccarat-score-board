@@ -11,10 +11,10 @@ export enum PairResult {
   AllPair,
 }
 
-export enum StrResult {
-  G,
-  R,
-  B,
+export enum StrGameResult {
+  Tie = 'G',
+  BankerWin = 'R',
+  PlayerWin = 'B',
 }
 
 export class RoundResult {

@@ -1,4 +1,9 @@
-import {GameResult, PairResult, RoundResult, StrResult} from './round-result';
+import {
+  GameResult,
+  PairResult,
+  RoundResult,
+  StrGameResult,
+} from './round-result';
 
 function GameResultParser(
   this: void,

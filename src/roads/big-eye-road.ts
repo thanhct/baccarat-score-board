@@ -63,6 +63,7 @@ export class BigEyeRoad extends DownRoad {
       result: 0, // Dummy
       gameResult: GameResult.BankerWin,
       pairResult: PairResult.NoPair,
+      stringResult: 'R',
     };
     return this.getPrediction(fakeNextRound, DownRoadGap.BigEyeRoadGap);
   }
@@ -78,6 +79,7 @@ export class BigEyeRoad extends DownRoad {
       result: 0, // Dummy
       gameResult: GameResult.PlayerWin,
       pairResult: PairResult.NoPair,
+      stringResult: 'B',
     };
     return this.getPrediction(fakeNextRound, DownRoadGap.BigEyeRoadGap);
   }

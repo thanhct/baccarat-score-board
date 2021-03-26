@@ -1,4 +1,9 @@
-import { GameResult, PairResult, RoundResult } from '../round-result';
+import {
+  GameResult,
+  PairResult,
+  RoundResult,
+  StrGameResult,
+} from '../round-result';
 import { wrapColumn, wrapRow } from './shared';
 import { SharedBigRoad } from './shared-big-road';
 import { RoadArray } from './road';
@@ -62,6 +67,7 @@ export class SmallRoad extends DownRoad {
       result: 0, // Dummy
       gameResult: GameResult.BankerWin,
       pairResult: PairResult.NoPair,
+      stringResult: StrGameResult['BankerWin'],
     };
     return this.getPrediction(fakeNextRound, DownRoadGap.SmallRoadGap);
   }
@@ -77,6 +83,7 @@ export class SmallRoad extends DownRoad {
       result: 0, // Dummy
       gameResult: GameResult.PlayerWin,
       pairResult: PairResult.NoPair,
+      stringResult: StrGameResult['PlayerWin'],
     };
     return this.getPrediction(fakeNextRound, DownRoadGap.SmallRoadGap);
   }

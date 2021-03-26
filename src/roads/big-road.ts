@@ -19,15 +19,15 @@ function generateBigRoadItemList(
 ): ReadonlyArray<BigRoadItem> {
   return roundResults
     .map(res => {
-       return  res.gameResult !== GameResult.Tie
-           ? {
-           order: res.order,
-           result: res.result,
-           gameResult: res.gameResult,
-           pairResult: res.pairResult,
-           strResult: res.stringResult,
-         } : undefined;
-
+      return res.gameResult !== GameResult.Tie
+        ? {
+            order: res.order,
+            result: res.result,
+            gameResult: res.gameResult,
+            pairResult: res.pairResult,
+            strResult: res.stringResult,
+          }
+        : undefined;
     })
     .filter((result): result is BigRoadItem => typeof result !== 'undefined');
 }
